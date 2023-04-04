@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import './weather.css';
 import axios from "axios";
 
 export const Weather = () => {
@@ -35,8 +36,8 @@ export const Weather = () => {
 
     return (
         <>
-        <form onSubmit={handleSubmit}>
-            <label htmlFor="">Search your location</label>
+        <form onSubmit={handleSubmit} className="form">
+            <label htmlFor="">Search your weather</label>
             <input type="text" value={city} onChange={(e)=> setCity(e.target.value)} />
             <button type="submit">Go</button>
         </form>
